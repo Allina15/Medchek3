@@ -27,7 +27,7 @@ public class Main {
                 PatientService patientService = new PatientServImpl(dao, patientDao);
 
                 HospitalDao hospitalDao = new DaoHospitalImpl(dao);
-                HospitalService hospitalService = new HospitalServiceImpl(dao, hospitalDao);
+                HospitalService hospitalService = new HospitalServiceImpl(hospitalDao);
 
                 DoctorDao doctorDao = new DaoDoctorImpl(dao);
                 DoctorService doctorService = new DoctorServiceImpl(dao, doctorDao);
