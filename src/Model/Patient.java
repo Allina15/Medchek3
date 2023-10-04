@@ -1,42 +1,75 @@
 package Model;
 
 public class Patient {
-    public static int id;
-    private final int instanceId;
-    private final String name;
-    private final String lastName;
-    private final int age;
-    private final Gender gender;
+    private Long id;
+    private Long instanceId;
+    private String name;
+    private String lastName;
+    private int age;
+    private Gender gender;
 
-    public Patient(String name, String lastName, int age, Gender gender) {
-        this.instanceId=id++;
+    public Patient(Long id, Long instanceId, String name, String lastName, int age, Gender gender) {
+        this.id = id;
+        this.instanceId = instanceId;
         this.name = name;
         this.lastName = lastName;
         this.age = age;
         this.gender = gender;
     }
 
-    public static int getId() {
+    public Long getId() {
         return id;
     }
 
-    public static void setId(int id) {
-        Patient.id = id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public int getInstanceId() {
+    public Long getInstanceId() {
         return instanceId;
     }
+
+    public void setInstanceId(Long instanceId) {
+        this.instanceId = instanceId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     public int getAge() {
         return age;
     }
 
+    public void setAge(int age) {
+        this.age = age;
+    }
 
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
 
     @Override
     public String toString() {
         return "Patient{" +
-                "instanceId=" + instanceId +
+                "id=" + id +
+                ", instanceId=" + instanceId +
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +

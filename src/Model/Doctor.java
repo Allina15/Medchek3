@@ -1,37 +1,75 @@
 package Model;
 
 public class Doctor {
-    public static int id;
-    private final int instanceId;
-    private final String name;
-    private final String lastName;
-    private final Gender gender;
-    private final int experienceYear;
+    public Long id;
+    private Long instanceId;
+    private String name;
+    private String lastName;
+    private Gender gender;
+    private int experienceYear;
 
-    public Doctor( String name, String lastName, Gender gender, int experienceYear) {
-        this.instanceId = id++;
+    public Doctor(Long id, Long instanceId, String name, String lastName, Gender gender, int experienceYear) {
+        this.id = id;
+        this.instanceId = instanceId;
         this.name = name;
         this.lastName = lastName;
         this.gender = gender;
         this.experienceYear = experienceYear;
     }
 
-    public static int getId() {
+    public Long getId() {
         return id;
     }
 
-    public static void setId(int id) {
-        Doctor.id = id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public int getInstanceId() {
+    public Long getInstanceId() {
         return instanceId;
+    }
+
+    public void setInstanceId(Long instanceId) {
+        this.instanceId = instanceId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public int getExperienceYear() {
+        return experienceYear;
+    }
+
+    public void setExperienceYear(int experienceYear) {
+        this.experienceYear = experienceYear;
     }
 
     @Override
     public String toString() {
         return "Doctor{" +
-                "instance=" + instanceId +
+                "id=" + id +
+                ", instanceId=" + instanceId +
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", gender=" + gender +
