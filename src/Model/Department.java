@@ -3,24 +3,17 @@ package Model;
 import java.util.List;
 
 public class Department {
-    public static int id;
+    public Long id;
     private int instanceId;
+    private String departmentName;
+    private List<Doctor> doctors;
 
-    private final String departmentName;
-    private final List<Doctor> doctors;
-
-    public Department(String departmentName, List<Doctor> doctors) {
-        this.instanceId = id++;
-        this.departmentName = departmentName;
-        this.doctors = doctors;
-    }
-
-    public static int getId() {
+    public Long getId() {
         return id;
     }
 
-    public static void setId(int id) {
-        Department.id = id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public int getInstanceId() {
@@ -34,18 +27,16 @@ public class Department {
     public String getDepartmentName() {
         return departmentName;
     }
+
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
+    }
+
     public List<Doctor> getDoctors() {
         return doctors;
     }
 
-
-
-    @Override
-    public String toString() {
-        return "Department{" +
-                "instanceId=" + instanceId +
-                ", departmentName='" + departmentName + '\'' +
-                ", doctors=" + doctors +
-                '}';
+    public void setDoctors(List<Doctor> doctors) {
+        this.doctors = doctors;
     }
 }

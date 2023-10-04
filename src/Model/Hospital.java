@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Hospital {
-    public static int id;
-    private final int instanceId;
-    private final String hospitalName;
+    private Long id;
+    private Long instanceId;
+    private  String hospitalName;
 
-    private final String address;
-    private final List<Department> departments;
-    private final List<Doctor> doctors;
-    private final List<Patient> patients;
+    private  String address;
+    private  List<Department> departments;
+    private  List<Doctor> doctors;
+    private  List<Patient> patients;
 
     public Hospital(String hospitalName, String address, List<Department> departments) {
         this.instanceId=id++;
@@ -22,15 +22,15 @@ public class Hospital {
         this.patients = new ArrayList<>();
     }
 
-    public static int getId() {
+    public Long getId() {
         return id;
     }
 
-    public static void setId(int id) {
-        Hospital.id = id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public int getInstanceId() {
+    public Long getInstanceId() {
         return instanceId;
     }
     public String getAddress() {
