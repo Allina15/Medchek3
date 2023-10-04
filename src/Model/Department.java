@@ -35,6 +35,10 @@ public class Department {
     public List<Doctor> getDoctors() {
         return doctors;
     }
+    public void addDoctor(Doctor doctor) {
+        doctors.add(doctor);
+    }
+
 
     public void setDoctors(List<Doctor> doctors) {
         this.doctors = doctors;
