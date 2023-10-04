@@ -22,13 +22,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         Dao dao = new Dao();
 
         PatientDao patientDao = new DaoPatientImpl(dao);
         PatientService patientService = new PatientServImpl();
-        Patient patient = new Patient(1L, 1l, "Davran", "Joldoshbaev", 18, Gender.MALE);
-        System.out.println(patientService.addPatientToHospital(1L, patient));
 
         HospitalDao hospitalDao = new DaoHospitalImpl(dao);
         HospitalService hospitalService = new HospitalServiceImpl(dao, hospitalDao);

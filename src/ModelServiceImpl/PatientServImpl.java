@@ -11,7 +11,9 @@ import java.util.List;
 import java.util.Map;
 
 public class PatientServImpl implements PatientService {
-    private DaoPatientImpl daoPatient;
+    private  DaoPatientImpl daoPatient;
+
+
 
     @Override
     public String addPatientToHospital(Long id, Patient patient) {
